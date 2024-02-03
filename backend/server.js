@@ -15,7 +15,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use(exerciseRoutes);
+app.use("/api", exerciseRoutes);
 
 // connect to mongodb 
 mongoose.connect(process.env.MONGO_URI)
